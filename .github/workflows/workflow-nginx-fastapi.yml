@@ -76,6 +76,7 @@ jobs:
 
             "docker stop nginx-container fastapi-container || true",
             "docker rm nginx-container fastapi-container || true",
+            "docker rmi $(docker images -q)",
 
             "cd /home/ec2-user",
             "docker compose pull",
